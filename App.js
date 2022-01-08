@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// import React from 'react';
+// import OrderScreen from './app/screens/OrderScreen';
+
+
+// export default function App() {
+//   return <OrderScreen/>;
+// }
+
+
+//2nd
+import React from 'react';
+import ProductScreen from './app/screens/ProductScreen';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <ProductScreen/>;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+//3rd
+// import React from 'react';
+// import ShopScreen from './app/screens/ShopScreen';
+
+// export default function App() {
+//   return <ShopScreen/>;
+// }
