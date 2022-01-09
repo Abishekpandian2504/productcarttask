@@ -32,8 +32,9 @@ import React, { Component } from 'react';
 import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
 import get_shop from '../data/get_shop.json';
 
-class ShopScreen extends Component {
-  render() {
+// class ShopScreen extends Component {
+  const ShopScreen = () => {
+  //render() 
     return (
         <View style={{flex: 1, flexDirection: 'column'}}>
            <Text >
@@ -62,7 +63,7 @@ class ShopScreen extends Component {
         </View>
      );
   }
-}
+
 const styles = StyleSheet.create({
   imageView: {
       margin: 15,

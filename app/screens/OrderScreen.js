@@ -36,9 +36,8 @@ const OrderScreen = () => {
         }}
       />
       <Text>price:Rs120</Text>
-      <Text>Current Count: {state.count}</Text>
 
-      <Image style={styles.logo} source={require('../assets/chocolatepizza.jpg')} />
+      <Image style={styles.logo} source={require('../assets/vegburger.jpg')} />
       <Button style={styles.button}
         title="+"
         onPress={() => {
@@ -52,7 +51,11 @@ const OrderScreen = () => {
         }}
       />
       <Text>price:Rs100</Text>
+
+      
       <Text>Current Count: {state.count}</Text>
+
+    
     
     </View>
   );
@@ -66,7 +69,8 @@ const styles = StyleSheet.create({
     marginBottom: 5
   }, 
   button: {
-    margin: 5
+    margin: 5,
+    color: "#ff8c00"
   }
 });
 
