@@ -59,8 +59,7 @@ const navigator = createStackNavigator(
       Product : ProductScreen,
       Shop : ShopScreen,
       Login : LoginScreen,
-     
-    
+       
     },
     {
       initialRouteName: 'Home',
