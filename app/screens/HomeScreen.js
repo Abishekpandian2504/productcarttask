@@ -1,6 +1,76 @@
+// import React from 'react';
+
+// import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
+
+//   const HomeScreen = ({ navigation }) => {
+//   // console.log(props);
+//  // console.log(props.navigation);
+//  // console.log(props.navigation.navigate('List'))
+
+//   return (
+//     <View>
+//       <Text style={styles.text}>      Welcome to KFC    </Text>
+//       <View style={styles.container}>
+//       <Button
+//        //  onPress={() => console.log('Button pressed')
+
+//         onPress={() => navigation.navigate('Shop')}
+//         title="Go to ShopDetails"
+//         />
+        
+//       <Button
+//       //  onPress={() => console.log('Button pressed')}
+        
+//         title="Products"
+//         onPress={() => navigation.navigate('Product')}
+        
+//       />
+//        <Button
+//       //  onPress={() => console.log('Button pressed')}
+        
+//         title="Order"
+//         onPress={() => navigation.navigate('Order')}
+        
+//       />
+//          <Button
+//       //  onPress={() => console.log('Button pressed')}
+        
+//         title="LogIn/SignUp"
+//         onPress={() => navigation.navigate('Login')}
+        
+//       />
+//       </View>
+           
+//     </View>
+//   );
+// };
+
+// const styles = StyleSheet.create({
+//   text: {
+//     fontSize: 40,
+//     color: '#dc143c',
+//     paddingTop:100,
+//     paddingBottom: 70
+//   },
+//   container: {
+//     margin:10,
+//     backgroundColor: '#d8bfd8',
+    
+//     // alignItems: 'center',
+//     // width: 100,
+//     // height:100,
+//     // alignContent: 'center'
+//   }
+ 
+ 
+// });
+
+// export default HomeScreen;
+
+//2nd
 import React from 'react';
 
-import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, View, Button, TouchableOpacity, ImageBackground } from 'react-native';
 
   const HomeScreen = ({ navigation }) => {
   // console.log(props);
@@ -9,7 +79,12 @@ import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
 
   return (
     <View>
-      <Text style={styles.text}>      Welcome to KFC    </Text>
+       <ImageBackground
+      blurRadius={1}
+
+      style={styles.background}
+          source={require("../assets/kfchome.png")}>
+      <Text style={styles.text}>KFC-eats   </Text>
       <View style={styles.container}>
       <Button
        //  onPress={() => console.log('Button pressed')
@@ -40,6 +115,7 @@ import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
         
       />
       </View>
+      </ImageBackground>
            
     </View>
   );
@@ -48,21 +124,23 @@ import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
 const styles = StyleSheet.create({
   text: {
     fontSize: 40,
-    color: '#dc143c',
+    color: '#ffffe0',
     paddingTop:100,
     paddingBottom: 70
   },
   container: {
     margin:10,
     backgroundColor: '#d8bfd8',
+  },
+  background: {
     
-    // alignItems: 'center',
-    // width: 100,
-    // height:100,
-    // alignContent: 'center'
-  }
+    justifyContent: 'flex-end',
+    alignItems: "center",
+},
  
  
 });
 
 export default HomeScreen;
+
+

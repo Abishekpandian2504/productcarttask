@@ -25,7 +25,7 @@ const OrderScreen = () => {
       blurRadius={10}
 
       style={styles.background}
-          source={require("../assets/kfc.png")}>
+          source={require("../assets/kfcorder2.jpg")}>
       <Image style={styles.logo} source={require('../assets/chickenburger.jpg')} />
       <Button style={styles.button}
         title="+"
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     marginBottom: 5
   }, 
   button: {
-    margin: 0,
+    margin: 10,
     color: "#ff8c00",
     width: 300,
     height:100

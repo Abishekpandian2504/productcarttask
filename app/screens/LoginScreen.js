@@ -1,9 +1,15 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Button, Image, ImageBackground } from 'react-native';
  
-const LoginScreen = ({navigation}) => {
+const LoginScreen = () => {
   return (
     <View>
+       <ImageBackground
+      blurRadius={10}
+
+      style={styles.background}
+          source={require("../assets/kfclog.jpg")}>
+          <Image style={styles.logo} source={require('../assets/KFC_Logo.jpg')} />
           <Text >  Name </Text>
       <TextInput 
         style={styles.input} 
@@ -35,7 +41,7 @@ const LoginScreen = ({navigation}) => {
          <Button title='signup' 
       onPress={() => console.log('Buttonpressed')}
       />
-      
+      </ImageBackground>
     </View>
   );
 };
@@ -45,7 +51,19 @@ const styles = StyleSheet.create({
         margin: 10,
         borderColor: 'black',
         borderWidth: 1
-      }
+      },
+      logo: {
+        width: 120,
+        height: 120,
+        alignSelf: 'center',
+        marginTop: 50,
+        marginBottom: 20,
+    },
+    background: {
+    
+      justifyContent: 'flex-end',
+  
+  },
 });
  
 export default LoginScreen;

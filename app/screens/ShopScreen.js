@@ -29,7 +29,7 @@
 
 //2nd
 import React, { Component } from 'react';
-import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
+import { View, Text, Image, FlatList, StyleSheet, ImageBackground} from 'react-native';
 import get_shop from '../data/get_shop.json';
 
 // class ShopScreen extends Component {
@@ -37,6 +37,12 @@ import get_shop from '../data/get_shop.json';
   //render() 
     return (
         <View style={{flex: 1, flexDirection: 'column'}}>
+   <ImageBackground
+      blurRadius={1}
+
+      style={styles.background}
+          source={require("../assets/kfc.png")}>
+
            <Text >
              KFC
            </Text>
@@ -60,6 +66,7 @@ import get_shop from '../data/get_shop.json';
              }
              keyExtractor={(item, index) => index.toString()}
            />
+           </ImageBackground>
         </View>
      );
   }
@@ -73,7 +80,13 @@ const styles = StyleSheet.create({
       width: 180,
       alignItems:'center',
       alignContent: 'center'
-    }
+    },
+    background: {
+    
+      justifyContent: 'flex-end',
+      alignItems: "center",
+  },
+  
 });
 
 export default ShopScreen;
