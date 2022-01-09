@@ -10,13 +10,14 @@ import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
   return (
     <View>
       <Text style={styles.text}>      Welcome to KFC    </Text>
+      <View style={styles.container}>
       <Button
-      // onPress={() => console.log('Button pressed')}
-        onPress={() => navigation.navigate('Shop')}
+       //  onPress={() => console.log('Button pressed')
 
+        onPress={() => navigation.navigate('Shop')}
         title="Go to ShopDetails"
+        />
         
-      />
       <Button
       //  onPress={() => console.log('Button pressed')}
         
@@ -38,9 +39,8 @@ import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
         onPress={() => navigation.navigate('Login')}
         
       />
-     
-
-      
+      </View>
+           
     </View>
   );
 };
@@ -49,8 +49,19 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 40,
     color: '#dc143c',
-
+    paddingTop:100,
+    paddingBottom: 70
+  },
+  container: {
+    margin:10,
+    backgroundColor: '#d8bfd8',
+    
+    // alignItems: 'center',
+    // width: 100,
+    // height:100,
+    // alignContent: 'center'
   }
+ 
  
 });
 

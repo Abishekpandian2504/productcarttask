@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import { View, Text, Image, StyleSheet, Button } from 'react-native';
+import { View, Text, Image, StyleSheet, Button, ImageBackground, TextInput } from 'react-native';
 
 
 const reducer = (state, action) => {
@@ -21,7 +21,11 @@ const OrderScreen = () => {
   return (
     
     <View>
-      
+       <ImageBackground
+      blurRadius={10}
+
+      style={styles.background}
+          source={require("../assets/kfc.png")}>
       <Image style={styles.logo} source={require('../assets/chickenburger.jpg')} />
       <Button style={styles.button}
         title="+"
@@ -55,7 +59,14 @@ const OrderScreen = () => {
       
       <Text>Current Count: {state.count}</Text>
 
-    
+      <TextInput 
+        style={styles.input} 
+        autoCapitalize="none"
+        autoCorrect={false}
+      />
+      <Text >  add more things text here  </Text>
+
+      </ImageBackground>
     
     </View>
   );
@@ -69,9 +80,24 @@ const styles = StyleSheet.create({
     marginBottom: 5
   }, 
   button: {
-    margin: 5,
-    color: "#ff8c00"
-  }
+    margin: 0,
+    color: "#ff8c00",
+    width: 300,
+    height:100
+  },
+  background: {
+    // flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: "center",
+},
+input: {
+  fontSize: 20,
+  width:200,
+  height:40,
+  paddingTop:20,
+  borderColor: 'black',
+  borderWidth: 1
+}
 });
 
 export default OrderScreen;
